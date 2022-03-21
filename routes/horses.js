@@ -14,34 +14,47 @@ router.get('/:slug/addActivity', async (req, res) => {
 });
 
 // adding activity for specific horse
-router.post('/:slug', async (req, res, next) =>{
+router.post('/:slug', async (req, res) =>{
   
-    req.horse = new Horse();
-    next();
+    //req.horse = new Horse();
+    req.activity = new Activity();
+    //
+    let horse = await Horse.findOne({ slug: req.params.slug });
 
-}, saveActivityAndRedirect('addActivity'));
+    //
+    let activity = req.activity;        
+    activity.description = req.body.description;
+    activity.category = req.body.category;
+    activity.startDate = req.body.startDate;
+    activity.endDate = req.body.endDate; 
+    activity.horseID = horse.id;
+    
+    //
+    try{
+        activity = await activity.save();
+        res.redirect(`/horses/${horse.slug}`);
+        
+    } catch(e){
+        res.render(`horses/show`, { horse: horse, activity: activity, horseRaces: horseRaces.breed});
+    } 
+    //next();
+
+});
 
 
+//delete
+router.post('/aaaa', async (req, res) =>{
+  
+    res.send('Hello World!')
+
+});
 
 
 function saveActivityAndRedirect(path){
     return async (req, res) =>{
-        let horse = await Horse.findOne({ slug: req.params.slug });
+        //      
 
-        let activity = req.activity;        
-        activity.description = req.body.description;
-        activity.category = req.body.category;
-        activity.startDate = req.body.startDate;
-        activity.endDate = req.body.endDate; 
-        activity.horseID = horse.id;
-
-        try{
-            activity = await activity.save();
-            res.redirect(`/horses/${horse.slug}`);
-            
-        } catch(e){
-            res.render(`horses/${path}`, { horse: horse});
-        } 
+        
     }
 }
 
@@ -64,8 +77,9 @@ router.get('/edit/:id', async (req, res) => {
 
 router.get('/:slug', async (req, res) => {
     let horse = await Horse.findOne({ slug: req.params.slug });
+    let activities = await Activity.find();
     if(horse == null) res.redirect('/');
-    res.render('horses/show', {horse: horse});
+    res.render('horses/show', {horse: horse, activities: activities});
 });
 
 router.post('/', async (req, res, next) =>{
@@ -98,7 +112,7 @@ function saveHorseAndRedirect(path){
             res.redirect(`/horses/${horse.slug}`);
             
         } catch(e){
-            res.render(`horses/${path}`, { horse: horse});
+            res.render(`horses/${path}`, {horse: horse, horseRaces: horseRaces.breed});
         } 
     }
 }

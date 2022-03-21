@@ -15,13 +15,13 @@
     <div class="container">
         <div class="form-group">
             <label for="name"> Description </label>
-            <input type="text" name="name" id="description" 
+            <input type="text" name="description" id="description" 
             class="form-control" value="<%= activity.description %>" required>    
         </div>
         <div class="form-group">
             <label for="gender">Category</label>
-            <select class="form-select" id="gender" name="gender" required>
-                <option selected value="<%= horse.gender %>"><%= activity.category %></option>
+            <select class="form-select" id="category" name="category" required>
+                <option selected value="<%= activity.category %>"><%= activity.category %></option>
                 <option value="health">Health</option>
                 <option value="hoes">Hoes</option>
                 <option value="riding">Riding</option>
@@ -30,11 +30,11 @@
         </div>
         <div class="form-group mb-3">
             <label for="date">Start Date</label>
-            <input type="text" name="datepicker" id="datepicker" class="form-control" value="<%= activity.startDate.toLocaleDateString()%>" required>    
+            <input type="text" name="startDate" id="startDate" class="form-control" value="<%= activity.startDate.toLocaleDateString()%>" required>    
         </div>
         <div class="form-group mb-3">
             <label for="date">End Date</label>
-            <input type="text" name="datepicker" id="datepicker" class="form-control" value="<%= activity.endDate.toLocaleDateString()%>" required>    
+            <input type="text" name="endDate" id="endDate" class="form-control" value="<%= activity.endDate.toLocaleDateString()%>" required>    
         </div>
         <div class="form-group mb-3">
             <label for="horseID">Horse ID</label>
