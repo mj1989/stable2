@@ -1,0 +1,443 @@
+{"breed":[
+{"raceName": "Aegidienberger"},
+
+{"raceName": "Akhal-Teke"},
+
+{"raceName": "Alt Oldenburg"},
+
+{"raceName": "Altèr Real"},
+
+{"raceName": "Altmaerkisches Draft Horse"},
+
+{"raceName": "American Indian Horse"},
+
+{"raceName": "American Miniature Horse"},
+
+{"raceName": "American Morgan Horse"},
+
+{"raceName": "American Quarter Horse"},
+
+{"raceName": "American Saddlebred"},
+
+{"raceName": "American Standardbred"},
+
+{"raceName": "Andalusian"},
+
+{"raceName": "Anglo European Studbook"},
+
+{"raceName": "Anglo-Arab"},
+
+{"raceName": "Appaloosa"},
+
+{"raceName": "Arabian Berber"},
+
+{"raceName": "Arabian horses"},
+
+{"raceName": "Arabian Partbred"},
+
+{"raceName": "Arabo-Friesian"},
+
+{"raceName": "Arasier"},
+
+{"raceName": "Ardennes"},
+
+{"raceName": "Asil Arabian"},
+
+{"raceName": "Assateague Pony"},
+
+{"raceName": "Australian Pony"},
+
+{"raceName": "Australian Stock Horse"},
+
+{"raceName": "Austrian Warmblood"},
+
+{"raceName": "Azteca"},
+
+{"raceName": "Baden Wuerttemberg"},
+
+{"raceName": "Bardigiano"},
+
+{"raceName": "Baroque Pinto"},
+
+{"raceName": "Bavarian Warmblood"},
+
+{"raceName": "Belgian Draft"},
+
+{"raceName": "Belgian Riding Pony"},
+
+{"raceName": "Belgian Warmblood"},
+
+{"raceName": "Berber"},
+
+{"raceName": "Black Forest Horse"},
+
+{"raceName": "Bosnian Mountain Horse"},
+
+{"raceName": "Boulonnais"},
+
+{"raceName": "Brandenburg Warmblood"},
+
+{"raceName": "Breton"},
+
+{"raceName": "British Warmblood"},
+
+{"raceName": "Budyonny"},
+
+{"raceName": "Camargue"},
+
+{"raceName": "Campolina"},
+
+{"raceName": "Caspian Horse"},
+
+{"raceName": "Classic Pony"},
+
+{"raceName": "Cleveland Bay"},
+
+{"raceName": "Clydesdale"},
+
+{"raceName": "Cob"},
+
+{"raceName": "Colorado Ranger"},
+
+{"raceName": "Connemara"},
+
+{"raceName": "Creme Horse"},
+
+{"raceName": "Criollo"},
+
+{"raceName": "CSFR Warmblood"},
+
+{"raceName": "Curly horse"},
+
+{"raceName": "Czech sports pony"},
+
+{"raceName": "Czech Warmblood"},
+
+{"raceName": "Dales Pony"},
+
+{"raceName": "Danish Warmblood"},
+
+{"raceName": "Dartmoor"},
+
+{"raceName": "Deliboz"},
+
+{"raceName": "Don Horse"},
+
+{"raceName": "Donkey"},
+
+{"raceName": "Draft Horse"},
+
+{"raceName": "Drum Horse"},
+
+{"raceName": "Duelmen"},
+
+{"raceName": "dutch coldblood"},
+
+{"raceName": "Dutch Tuigpaard"},
+
+{"raceName": "East Friesian"},
+
+{"raceName": "Exmoor Pony"},
+
+{"raceName": "Falabella"},
+
+{"raceName": "Felin Pony"},
+
+{"raceName": "Fell pony"},
+
+{"raceName": "Fjord Horses"},
+
+{"raceName": "Frederiksborg"},
+
+{"raceName": "Freiberger"},
+
+{"raceName": "French riding pony"},
+
+{"raceName": "French Trotter"},
+
+{"raceName": "Friesian horses"},
+
+{"raceName": "Furioso"},
+
+{"raceName": "Galiceno Pony"},
+
+{"raceName": "Gelderland"},
+
+{"raceName": "German Classic Pony"},
+
+{"raceName": "German Riding Horse"},
+
+{"raceName": "German Riding Pony"},
+
+{"raceName": "German Sport Horse"},
+
+{"raceName": "German Trotter"},
+
+{"raceName": "Gotland Pony"},
+
+{"raceName": "Gypsy Horse"},
+
+{"raceName": "Hackney"},
+
+{"raceName": "Hackney Pony"},
+
+{"raceName": "Haflinger"},
+
+{"raceName": "Half Arabs"},
+
+{"raceName": "Hanoverian"},
+
+{"raceName": "Heavy Warmblood"},
+
+{"raceName": "Hessian Warmblood"},
+
+{"raceName": "Highland pony"},
+
+{"raceName": "Hispano Arabian"},
+
+{"raceName": "Holstein"},
+
+{"raceName": "Hucul"},
+
+{"raceName": "Hungarian Sport Horse"},
+
+{"raceName": "Icelandic Horse"},
+
+{"raceName": "Indianbred"},
+
+{"raceName": "Irish Sport Horse"},
+
+{"raceName": "Irish Thoroughbred"},
+
+{"raceName": "Italian trotter"},
+
+{"raceName": "Jutland"},
+
+{"raceName": "Kabardin"},
+
+{"raceName": "Karabakh"},
+
+{"raceName": "Karachai"},
+
+{"raceName": "Kathiawari"},
+
+{"raceName": "Kentucky Mountain Saddle Horse"},
+
+{"raceName": "Kinsky Horse"},
+
+{"raceName": "Kisber"},
+
+{"raceName": "Kladruby"},
+
+{"raceName": "Knabstrup"},
+
+{"raceName": "Konik"},
+
+{"raceName": "KWPN"},
+
+{"raceName": "Latvian Warmblood"},
+
+{"raceName": "Leonhard"},
+
+{"raceName": "Lewitzer"},
+
+{"raceName": "Lipizzaner"},
+
+{"raceName": "Lusitano"},
+
+{"raceName": "Malopolska horse"},
+
+{"raceName": "Mangalarga Marchador"},
+
+{"raceName": "Maremmano"},
+
+{"raceName": "Mecklenburg Warmblood"},
+
+{"raceName": "Menorquin"},
+
+{"raceName": "Mérens"},
+
+{"raceName": "Mingrelian"},
+
+{"raceName": "Mini Shetland Pony"},
+
+{"raceName": "Missouri Foxtrotter"},
+
+{"raceName": "Mongolian Pony"},
+
+{"raceName": "More ponies/small horses"},
+
+{"raceName": "Moritzburger"},
+
+{"raceName": "Mule"},
+
+{"raceName": "Mule"},
+
+{"raceName": "Murgese"},
+
+{"raceName": "Mustang (american)"},
+
+{"raceName": "Mustang (canadian)"},
+
+{"raceName": "New Forest Pony"},
+
+{"raceName": "NMPRS"},
+
+{"raceName": "Noriker"},
+
+{"raceName": "NRPS"},
+
+{"raceName": "Old Wuerttemberg"},
+
+{"raceName": "Oldenburg"},
+
+{"raceName": "Oldenburg-International (OS)"},
+
+{"raceName": "Orlov"},
+
+{"raceName": "Other Breeds"},
+
+{"raceName": "Other Heavy Horses"},
+
+{"raceName": "Other Thoroughbred Breeds"},
+
+{"raceName": "Other Warmbloods"},
+
+{"raceName": "Paint Horse"},
+
+{"raceName": "Palomino"},
+
+{"raceName": "Paso Fino"},
+
+{"raceName": "Paso Iberoamericano"},
+
+{"raceName": "Percheron"},
+
+{"raceName": "Peruvian Paso"},
+
+{"raceName": "Pintos"},
+
+{"raceName": "Polish Ardennais"},
+
+{"raceName": "Polish Coldblood"},
+
+{"raceName": "Polish Halfbred"},
+
+{"raceName": "Polish riding pony"},
+
+{"raceName": "Polish Warmblood"},
+
+{"raceName": "Polo Pony"},
+
+{"raceName": "Pony of the Americas"},
+
+{"raceName": "Portuguese Sport Horse"},
+
+{"raceName": "Pottok"},
+
+{"raceName": "PRE"},
+
+{"raceName": "Przewalski's Horse"},
+
+{"raceName": "Pura Raza Mallorquina"},
+
+{"raceName": "Quarab"},
+
+{"raceName": "Quarter Pony"},
+
+{"raceName": "Rhenisch-German Heavy Draft"},
+
+{"raceName": "Rhenish-Westphalian Heavy Draft"},
+
+{"raceName": "Rhinelander"},
+
+{"raceName": "Rocky Mountain Horse"},
+
+{"raceName": "Rottal"},
+
+{"raceName": "Russian Saddle Horse"},
+
+{"raceName": "Saxon Warmblood"},
+
+{"raceName": "Saxon-Thuringian Draft Horse"},
+
+{"raceName": "Saxony Anhaltiner"},
+
+{"raceName": "Schleswig"},
+
+{"raceName": "Schweike"},
+
+{"raceName": "Sella Italiano"},
+
+{"raceName": "Selle Français"},
+
+{"raceName": "Senner Horse"},
+
+{"raceName": "Shagya Arabian"},
+
+{"raceName": "Shetland Ponies"},
+
+{"raceName": "Shire Horse"},
+
+{"raceName": "Silesian"},
+
+{"raceName": "Slovak Warmblood"},
+
+{"raceName": "Small German riding horse"},
+
+{"raceName": "Sokolski horse"},
+
+{"raceName": "Sorraia"},
+
+{"raceName": "South German Coldblood"},
+
+{"raceName": "Spanish Sporthorse"},
+
+{"raceName": "Spotted Saddle Horse"},
+
+{"raceName": "Straight Egyptian"},
+
+{"raceName": "Suffolk"},
+
+{"raceName": "Swedish Warmblood"},
+
+{"raceName": "Swiss Warmblood"},
+
+{"raceName": "Sztumski horse"},
+
+{"raceName": "Tarpan"},
+
+{"raceName": "Tennessee walking horse"},
+
+{"raceName": "Tersk"},
+
+{"raceName": "Thoroughbred"},
+
+{"raceName": "Thuringian Warmblood"},
+
+{"raceName": "Tori"},
+
+{"raceName": "Trakehner"},
+
+{"raceName": "Ukrainian Riding Horse"},
+
+{"raceName": "Warlander"},
+
+{"raceName": "Welsh A (Mountain Pony)"},
+
+{"raceName": "Welsh B"},
+
+{"raceName": "Welsh C (of Cob Type)"},
+
+{"raceName": "Welsh D (Cob)"},
+
+{"raceName": "Welsh PB (Partbred)"},
+
+{"raceName": "Westphalian"},
+
+{"raceName": "Wuerttemberg"},
+
+{"raceName": "Zangersheider"},
+
+{"raceName": "Zweibruecker"}]
+}

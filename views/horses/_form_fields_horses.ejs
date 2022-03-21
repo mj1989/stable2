@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+
+<div class="form-group">
+    <label for="name">Name </label>
+    <input type="text" name="name" id="name" class="form-control" value="<%= horse.name %>" required>    
+</div>
+<div class="form-group">
+    <label for="gender">Gender</label>
+    <select class="form-select" id="gender" name="gender" required>
+        <option selected value="<%= horse.gender %>"><%= horse.gender %></option>
+        <option value="Stallion">Stallion</option>
+        <option value="Mare">Mare</option>
+        <option value="Gelding">Gelding</option>
+      </select>   
+</div>
+<div class="form-group">
+    <label for="breed">Breed</label>
+    <select class="form-select" id="breed" name="breed" required>
+        <option selected value="<%= horse.breed %>"><%= horse.breed %></option>
+        <% 
+            horseRaces.forEach(horseBreed => {
+        %>
+        <option value="<%= horseBreed.raceName %>"><%= horseBreed.raceName %></option>
+        <% }) %>
+      </select>    
+</div>
+<div class="form-group mb-3">
+    <label for="date">Date</label>
+    <input type="text" name="datepicker" id="datepicker" class="form-control" value="<%= horse.date.toLocaleDateString()%>" required>    
+</div>
+<a href="/" class="btn btn-secondary">Back</a>
+<button type="submit" class="btn btn-primary">Save</button>
+
+<script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+</script>
