@@ -37,7 +37,7 @@
           
         </div>
         <ul class="list-group list-group-flush">
-          <% activities.forEach( activity => { if( activity.horseID == horse.id){ %>
+          <% activities.forEach( activity => { if( activity.horseID == horse.id && activity.isDone == false ){ %>
           <li class="list-group-item">
               <%= activity.description %>
               <div class="text-muted">
@@ -45,9 +45,11 @@
               </div>
               <span class="badge bg-secondary"><%= activity.category %></span>
               <div class="mt-2 mb-2">
-                <a href="" class="btn btn-success text-white">Done</a>
-                <a href="" class="btn btn-info text-white">Edit</a>
-                <form action="" method="POST" class="d-inline">
+                <form action="/horses/<%= horse.slug %>/<%= activity.id %>/done?_method=PUT" method="POST" class="d-inline">
+                  <button type="submit" class="btn btn-success">Done</button>
+              </form>
+                <a href="<%= horse.slug %>/edit/<%= activity.id %>" class="btn btn-info text-white">Edit</a>
+                <form action="/horses/<%= horse.slug %>/<%= activity.id %>?_method=DELETE" method="POST" class="d-inline">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </div>
@@ -61,9 +63,20 @@
           History
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
+          <% activities.forEach( activity => { if( activity.horseID == horse.id && activity.isDone == true ){ %>
+          <li class="list-group-item">
+              <%= activity.description %>
+              <div class="text-muted">
+                <%= activity.startDate.toLocaleDateString() %> - <%= activity.endDate.toLocaleDateString() %>
+              </div>
+              <span class="badge bg-secondary"><%= activity.category %></span>
+              <div class="mt-2 mb-2">
+                <form action="/horses/<%= horse.slug %>/<%= activity.id %>/undone?_method=PUT" method="POST" class="d-inline">
+                  <button type="submit" class="btn btn-secondary">Undone</button>
+              </form>
+            </div>
+            </li>
+          <% }}) %>
         </ul>
       </div>      
     </div>

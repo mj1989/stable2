@@ -3,6 +3,8 @@ const Horse = require('./../models/horse');
 const Activity = require('./../models/activity');
 const router = express.Router();
 const horseRaces = require('./../assets/races.json');
+const horse = require('./../models/horse');
+const activity = require('./../models/activity');
 
 /*
 * All routes bellow are for activities for specific horse
@@ -37,26 +39,76 @@ router.post('/:slug', async (req, res) =>{
     } catch(e){
         res.render(`horses/show`, { horse: horse, activity: activity, horseRaces: horseRaces.breed});
     } 
-    //next();
-
 });
 
-
-//delete
-router.post('/aaaa', async (req, res) =>{
-  
-    res.send('Hello World!')
-
+//routing to editing activity
+router.get('/:slug/edit/:id', async (req, res) => {
+    
+    const activity = await Activity.findById(req.params.id);
+    const horse = await Horse.findById(activity.horseID);
+    res.render('horses/editActivity', {horse: horse, horseRaces: horseRaces.breed, activity: activity});
 });
+//editing activity by put
+router.put('/:slug/:id', async (req, res, next) => {
+    let activity = await Activity.findById(req.params.id);
+    let horse = await Horse.findById(activity.horseID);
 
+    activity.description = req.body.description;
+    activity.category = req.body.category;
+    activity.startDate = req.body.startDate;
+    activity.endDate = req.body.endDate; 
+    activity.horseID = horse.id;
 
-function saveActivityAndRedirect(path){
-    return async (req, res) =>{
-        //      
-
+    try{
+        activity = await activity.save();
+        res.redirect(`/horses/${horse.slug}`);
         
-    }
-}
+    } catch(e){
+        res.render(`horses/show`, { horse: horse, activity: activity, horseRaces: horseRaces.breed});
+    } 
+
+});
+//edditing statud done
+//editing activity by put
+router.put('/:slug/:id/done', async (req, res) => {
+    let activity = await Activity.findById(req.params.id);
+    let horse = await Horse.findById(activity.horseID);
+
+    activity.isDone = true;
+
+    try{
+        activity = await activity.save();
+        res.redirect(`/horses/${horse.slug}`);
+        
+    } catch(e){
+        res.render(`horses/show`, { horse: horse, activity: activity, horseRaces: horseRaces.breed});
+    } 
+
+});
+////editing activity by put undone status
+router.put('/:slug/:id/undone', async (req, res) => {
+    let activity = await Activity.findById(req.params.id);
+    let horse = await Horse.findById(activity.horseID);
+
+    activity.isDone = false;
+
+    try{
+        activity = await activity.save();
+        res.redirect(`/horses/${horse.slug}`);
+        
+    } catch(e){
+        res.render(`horses/show`, { horse: horse, activity: activity, horseRaces: horseRaces.breed});
+    } 
+
+});
+//deleting activity
+router.delete('/:slug/:id', async (req, res) => {
+    let horse = await Horse.findOne({ slug: req.params.slug });
+    await Activity.findByIdAndDelete(req.params.id);
+    res.redirect(`/horses/${horse.slug}`);
+})
+
+
 
 
 /*
@@ -95,6 +147,7 @@ router.put('/:id', async (req, res, next) => {
     next();
 
 }, saveHorseAndRedirect('edit'))
+
 router.delete('/:id', async (req, res) => {
     await Horse.findByIdAndDelete(req.params.id);
     res.redirect('/');

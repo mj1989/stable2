@@ -22,6 +22,11 @@ const activitySchema = new mongoose.Schema({
     horseID:{
         type: String,
         required: true
+    },
+    isDone:{
+        type: Boolean,
+        default: false,
+        required: true
     }
 });
 
