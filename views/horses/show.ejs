@@ -41,7 +41,18 @@
           <li class="list-group-item">
               <%= activity.description %>
               <div class="text-muted">
-                <%= activity.startDate.toLocaleDateString() %> - <%= activity.endDate.toLocaleDateString() %>
+                Start date: <%= activity.startDate.toLocaleDateString() %> at: 
+                <%= activity.startDate.toISOString().split('T')[1].split(':')[0]%>:<%= activity.startDate.toISOString().split('T')[1].split(':')[1]%>
+                
+              </div>
+              <div class="text-muted">
+                End date: <%= activity.endDate.toLocaleDateString() %> at: 
+                <%= activity.endDate.toISOString().split('T')[1].split(':')[0]%>:<%= activity.endDate.toISOString().split('T')[1].split(':')[1]%>
+              </div>
+              <div class="text-muted">
+                
+                Duration: <%= Math.floor((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000) %>h and <%= Math.round(((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000 - Math.floor((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000))*60) %> min
+    
               </div>
               <span class="badge bg-secondary"><%= activity.category %></span>
               <div class="mt-2 mb-2">
@@ -66,8 +77,16 @@
           <% activities.forEach( activity => { if( activity.horseID == horse.id && activity.isDone == true ){ %>
           <li class="list-group-item">
               <%= activity.description %>
+              
               <div class="text-muted">
-                <%= activity.startDate.toLocaleDateString() %> - <%= activity.endDate.toLocaleDateString() %>
+                Start date: <%= activity.startDate.toLocaleDateString() %> at: 
+                <%= activity.startDate.toISOString().split('T')[1].split(':')[0]%>:<%= activity.startDate.toISOString().split('T')[1].split(':')[1]%>
+                
+              </div>
+              <div class="text-muted">
+                
+                Duration: <%= Math.floor((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000) %>h and <%= Math.round(((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000 - Math.floor((activity.endDate.getTime() - activity.startDate.getTime())/3600/1000))*60) %> min
+    
               </div>
               <span class="badge bg-secondary"><%= activity.category %></span>
               <div class="mt-2 mb-2">

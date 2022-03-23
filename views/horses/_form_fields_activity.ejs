@@ -29,12 +29,24 @@
               </select>   
         </div>
         <div class="form-group mb-3">
-            <label for="date">Start Date</label>
-            <input type="text" name="startDate" id="startDate" class="form-control" value="<%= activity.startDate.toLocaleDateString()%>" required>    
+            <label for="startDate">Start Date</label>
+            <input type="date" name="startDate" id="startDate" class="form-control" 
+            value="<%= activity.startDate.toISOString().split('T')[0] %>" required>    
         </div>
         <div class="form-group mb-3">
-            <label for="date">End Date</label>
-            <input type="text" name="endDate" id="endDate" class="form-control" value="<%= activity.endDate.toLocaleDateString()%>" required>    
+            <label for="startTime">Start time</label>
+            <input type="time" name="startTime" id="startTime" class="form-control" 
+            value="<%= Number(activity.startDate.toISOString().split('T')[1].split(':')[0])%>:<%= activity.startDate.toISOString().split('T')[1].split(':')[1]%>" required>    
+        </div>
+        <div class="form-group mb-3">
+            <label for="endDate">End Date</label>
+            <input type="date" name="endDate" id="endDate" class="form-control" 
+            value="<%= activity.endDate.toISOString().split('T')[0] %>" required>    
+        </div>
+        <div class="form-group mb-3">
+            <label for="endTime">End time</label>
+            <input type="time" name="endTime" id="endTime" class="form-control" 
+            value="<%= Number(activity.endDate.toISOString().split('T')[1].split(':')[0])%>:<%= activity.endDate.toISOString().split('T')[1].split(':')[1]%>" required>    
         </div>
         <div class="form-group mb-3">
             <label for="horseID">Horse ID</label>

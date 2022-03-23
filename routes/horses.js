@@ -27,8 +27,13 @@ router.post('/:slug', async (req, res) =>{
     let activity = req.activity;        
     activity.description = req.body.description;
     activity.category = req.body.category;
+    //setting time for startDate
     activity.startDate = req.body.startDate;
+    activity.startDate.setHours(Number(req.body.startTime.split(':')[0])+1, Number(req.body.startTime.split(':')[1]));
+    //setting time for endDate
     activity.endDate = req.body.endDate; 
+    activity.endDate.setHours(Number(req.body.endTime.split(':')[0])+1, Number(req.body.endTime.split(':')[1]));
+    
     activity.horseID = horse.id;
     
     //
@@ -55,11 +60,18 @@ router.put('/:slug/:id', async (req, res, next) => {
 
     activity.description = req.body.description;
     activity.category = req.body.category;
+    
+    //setting time for startDate
     activity.startDate = req.body.startDate;
+    activity.startDate.setHours(Number(req.body.startTime.split(':')[0])+1, Number(req.body.startTime.split(':')[1]));
+    //setting time for endDate
     activity.endDate = req.body.endDate; 
+    activity.endDate.setHours(Number(req.body.endTime.split(':')[0])+1, Number(req.body.endTime.split(':')[1]));
+    
     activity.horseID = horse.id;
 
     try{
+        
         activity = await activity.save();
         res.redirect(`/horses/${horse.slug}`);
         
